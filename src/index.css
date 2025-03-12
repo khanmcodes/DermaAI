@@ -1,0 +1,144 @@
+:root {
+  --bg-color: #121212;
+  --pinkL: #ffadad;
+  --pinkD: #915077;
+  --text-color: #FFF5E1; 
+  --blue: #94b9ff;
+  --green: #cdffd8;
+  --darkGreen: #004347;
+  --gray: #FFF5E1;
+  --red: #984b4b;
+  --font-family: "Inter", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--gray);
+  font-family: var(--font-family);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+a {
+  color: var(--gray);
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+
+a:hover {
+  color: var(--pinkL);
+}
+
+button {
+  font-family: var(--font-family);
+  border: none;
+  cursor: pointer;
+  padding: 15px 30px;
+  border-radius: 20px;
+  transition: background 0.2s ease-in-out;
+  width: fit-content;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.btn-blue {
+  background-color: var(--blue);
+  color: white;
+}
+
+.btn-blue:hover {
+  background-color: #187bcd;
+}
+
+.btn-green {
+  background-color: var(--green);
+  color: white;
+}
+
+.btn-green:hover {
+  background-color: #1a9b74;
+}
+
+.btn-gradient {
+  background: linear-gradient(90deg, var(--pinkD), var(--pinkD));
+  color: white;
+  border: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-gradient:hover {
+  filter: brightness(1.2);
+  transform: scale(1.02);
+  box-shadow: 4px 2px 15px rgba(125, 32, 201, 0.541);
+}
+
+.btn-gradient-outline {
+  background: transparent;
+  color: var(--blue);
+  border: 2px solid;
+  border-image-slice: 1;
+  transition: all 0.2s ease-in-out;
+  border-radius: 20px;
+}
+
+.btn-gradient-outline:hover {
+  filter: brightness(1.2);
+  transform: scale(1.02);
+  box-shadow: 0px 4px 15px rgba(32, 201, 151, 0.3);
+}
+
+/* General Responsive Fixes */
+@media screen and (max-width: 1024px) {
+  body {
+    font-size: 16px;
+  }
+
+  .container {
+    padding: 0 20px;
+  }
+}
+
+/* Tablet View */
+@media screen and (max-width: 768px) {
+  .btn {
+    padding: 12px 24px;
+    font-size: 18px;
+  }
+
+  .image-container img {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+}
+
+/* Mobile View */
+@media screen and (max-width: 480px) {
+  h1 {
+    font-size: 22px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  .btn {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+
+  button {
+    padding: 12px 21px;
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,89 @@
+.disease-section {
+  text-align: center;
+  padding: 0 2rem 2rem 2rem;
+}
+
+.disease-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Forces exactly 2 columns */
+  gap: 2rem;
+  margin-top: 2rem;
+  padding: 1rem;
+  grid-auto-flow: row; /* Ensures items are placed row by row */
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+}
+
+.disease-card {
+  text-align: justify;
+  background: #221a20bd;
+  padding: 1.5rem;
+  border-radius: 0.8rem;
+  box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  border: 1px solid #292929;
+  display: flex;
+  width: fit-content;
+}
+
+.disease-card div{
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.disease-card h2 {
+  color: var(--text-color);
+  line-height: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.disease-card p {
+  font-size: 1.1rem;
+  width: 20rem;
+  text-align:left;
+  color: var(--text-color);
+}
+
+.disease-image {
+  height: 10rem;
+  margin-bottom: 1rem;
+  border-radius: 0.5rem;
+  transition: transform 0.3s ease-in-out;
+}
+
+@media (hover: hover) {
+  .disease-image:hover {
+    transform: scale(2);
+  }
+}
+
+@media (max-width: 768px) {
+  .disease-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .disease-card {
+    padding: 1.2rem;
+  }
+
+  .disease-image {
+    width: 5rem;
+    height: 5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .disease-grid {
+      grid-template-columns: repeat(2, 1fr); /* 3-column layout on desktops */
+  }
+}
+
+
+@media (min-width: 1440px) {
+  .disease-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
