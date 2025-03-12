@@ -1,6 +1,6 @@
 import React from "react";
 import heroImg from "../assets/Images/heroImg.png";
-import heroImg2 from "../assets/Images/heroImg2.png";
+import heroImg2 from "../assets/Images/heroimg2.png";
 import { NavLink } from "react-router-dom";
 import { FiUpload } from "react-icons/fi";
 import Stepper, { Step } from "../components/Stepper/Stepper";
