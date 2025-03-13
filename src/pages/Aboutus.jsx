@@ -15,7 +15,7 @@ export default function Aboutus() {
         <img src={aboutbg} alt="About DermaAI" />
         <div className="overlay">
           <h1 className="about-name">
-            derma<span>ai</span>
+            S<span>A</span>F
           </h1>
           <p className="about-heading">
             Revolutionizing Skin Disease Detection
@@ -28,7 +28,7 @@ export default function Aboutus() {
         <div className="about-text">
           <h2>About</h2>
           <p>
-            <strong style={{ color: "var(--pinkL)" }}>DermaAI</strong> is an
+            <strong style={{ color: "var(--pinkL)" }}>SAF</strong> - Skin Advise Fusion is an
             AI-powered tool designed to assist in{" "}
             <strong>skin disease detection</strong>. Our platform leverages{" "}
             <strong>machine learning</strong> to provide fast, accessible, and{" "}
@@ -57,7 +57,8 @@ export default function Aboutus() {
 
         <div className="team-section">
           <h1 className="about-name" style={{ marginBottom: "30px" }}>
-            derma<span>ai Team</span>
+          S<span>A</span>F
+          <span>Team</span>
           </h1>
           <h2>Creators</h2>
           <div className="team-grid">

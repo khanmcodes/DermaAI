@@ -40,7 +40,7 @@ function Navbar() {
           <NavLink to="/">
             <div className="logo">
               <div className="logoTitle">
-                derma<span>ai</span>
+                S<span>A</span>F
               </div>
             </div>
           </NavLink>
