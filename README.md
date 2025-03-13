@@ -1,1 +1,1 @@
-# PNUE SCAN
+# DermaAI
