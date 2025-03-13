@@ -5,7 +5,6 @@ import {
 } from "react-router-dom";
 import Home from "./pages/Home";
 import Diagnose from "./pages/Diagnose";
-import HowItWorks from "./pages/HowItWorks";
 import Aboutus from "./pages/Aboutus";
 import Navbar from "./components/Navbar";
 import "./App.css";
@@ -32,7 +31,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/Diagnose" element={<Diagnose />} />
-        <Route path="/How-It-Works" element={<HowItWorks />} />
+        {/* <Route path="/How-It-Works" element={<HowItWorks />} /> */}
         <Route path="/About-us" element={<Aboutus />} />
       </Routes>
       <Footer/>

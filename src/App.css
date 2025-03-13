@@ -53,7 +53,7 @@
 
 .nav-links a:hover,
 .nav-links p:hover {
-  color: rgb(227, 196, 255);
+  color: var(--pinkL);
 }
 
 .nav-links a.active::after {
@@ -316,6 +316,7 @@
 .links-container p {
   cursor: pointer;
   transition: color 0.2s ease-in-out;
+  font-weight: 500;
 }
 
 .links-container p:hover {
@@ -346,19 +347,22 @@
 .navbar-container {
   display: flex;
   justify-content: center;
+  padding: 20px 20px;
+  position: fixed;
+  align-items: center;
+  z-index: 99999;
+  left: 0;
+  right: 0;
 }
 
-/* Navbar Base Styles */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 25px;
-  background: transparent;
-  position: fixed;
+  padding: 2px 20px;
   color: var(--bg-color);
-  z-index: 1000;
   width: 100vw;
+  border-radius: 50px;
 }
 
 /* Hide Hamburger Icon by Default */
@@ -371,7 +375,7 @@
 .hamburger span {
   width: 30px;
   height: 2px;
-  background: var(--darkGreen);
+  background: var(--text-color);
   margin: 3px 0;
   border-radius: 100px;
   transition: all 0.3s ease-in-out;
@@ -394,14 +398,54 @@
   display: block;
 }
 
-/* Mobile View */
 @media screen and (max-width: 768px) {
+  /* 📌 Hamburger Menu */
   .hamburger {
     display: flex;
-    position: absolute;
     right: 20px;
     top: 20px;
     z-index: 1100;
+  }
+
+  .hero-section,
+  .hero-content {
+    height: 65vh;
+    width: 100vw;
+    z-index: 0;
+  }
+
+  .hero-content {
+    padding: 20px 20px;
+  }
+
+  .hero-transImg {
+    left: 0;
+    height: 30vh;
+  }
+
+  .hamburger.open span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.open span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.open span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  /* 📌 Navbar */
+  .navbar {
+    position: absolute;
+    padding: 2px 15px;
+  }
+
+  .dwd-section,
+  .howitworks-section,
+  .faq-section {
+    width: auto;
+    padding: 45px 20px;
   }
 
   .nav-links {
@@ -410,7 +454,7 @@
     right: -100%;
     width: 70%;
     height: 100vh;
-    background: rgba(255, 255, 255, 0.651);
+    background: rgba(0, 0, 0, 0.651);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -423,106 +467,27 @@
     right: 0;
   }
 
-  /* Hamburger Animation */
-  .hamburger.open span:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
-  }
-
-  .hamburger.open span:nth-child(2) {
-    opacity: 0;
-  }
-
-  .hamburger.open span:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg);
-  }
-}
-
-/* Base Styles */
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.mobHeroImg {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  justify-content: center;
-}
-
-.mobHeroImg img {
-  display: none;
-  width: 50%;
-  height: 50%;
-  object-fit: contain;
-  mix-blend-mode: multiply;
-}
-
-/* Responsive for Tablets (768px and below) */
-@media screen and (max-width: 768px) {
-  .container {
-    width: 95%;
-  }
-
-  .hero-section {
-    flex-direction: column;
-    text-align: center;
-    padding: 40px 20px;
+  .nav-links {
+    width: 60%;
   }
 
   .hero-text {
     font-size: 22px;
   }
 
-  .btn {
-    padding: 12px 24px;
-    font-size: 18px;
-  }
-
-  .image-container img {
-    width: 100%;
-    max-width: 400px;
-    margin: 0 auto;
-  }
-}
-
-/* Responsive for Mobile (480px and below) */
-@media screen and (max-width: 758px) {
-  .container {
-    width: 100%;
-    padding: 0 15px;
-  }
-
-  .mobHeroImg img {
-    display: flex;
-  }
-
-  .hero-section,
-  .learn-section,
-  .learn-section-content,
-  .howitworks-section,
-  .faq-section {
-    padding: 15px 30px 35px 30px;
-  }
-
-  .btn {
-    padding: 10px 20px;
-    font-size: 16px;
-  }
-
   .heroL .heroH1,
   .learnR .learnH1,
   .hiwH1 {
-    font-size: 20px;
+    font-size: 1.7rem;
     line-height: 32px;
     margin-bottom: 5px;
   }
 
-  .faqH1 {
-    font-size: 15px;
-    line-height: auto;
-    margin-bottom: 5px;
+  .heroL .heroP {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    line-height: normal;
+    width: 80vw;
   }
 
   .heroL,
@@ -533,60 +498,48 @@
   }
 
   .heroR img {
+    width: 60%;
+  }
+
+  .heroR {
+    padding-top: 20px;
+  }
+
+  .hero-transImg {
     display: none;
   }
 
-  .heroL .heroP {
-    font-size: 10px;
-    margin-bottom: 10px;
+  /* 📌 Mobile Hero Image */
+  .mobHeroImg {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
   }
 
+  .mobHeroImg img {
+    display: flex;
+    width: 50%;
+    height: 50%;
+    object-fit: contain;
+    mix-blend-mode: multiply;
+  }
+
+  /* 📌 Buttons */
+  .btn {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+
+  /* 📌 Sections */
   .section {
     padding: 20px 10px;
   }
 
-  .nav-links {
-    width: 60%;
-  }
-
-  .learn-section-content {
-    flex-direction: column;
-  }
-
-  .learn-section .learnLink {
-    font-size: 10px;
-  }
-
-  .arrowIcon {
-    font-size: 12px;
-    stroke-width: 2 0.5;
-  }
-
-  .hiw-video {
-    width: 100%;
-    height: 190px;
-  }
-
-  .hiw-video iframe {
-    border-radius: 20px;
-  }
-
-  .footLogo img {
-    height: 100px;
-  }
-
-  .footLogo {
-    font-size: 27px;
-    line-height: 23px;
-  }
-
-  .footLogo {
-    height: auto;
-    width: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0px;
+  /* 📌 Footer */
+  .footer {
+    padding: 20px 40px 10px;
+    text-align: center;
   }
 
   .topFoot,
@@ -600,6 +553,19 @@
     display: none;
   }
 
+  .footLogo {
+    font-size: 27px;
+    line-height: 23px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+  }
+
+  .footLogo img {
+    height: 100px;
+  }
+
   .subtitle {
     font-weight: 500;
     font-size: 10px;
@@ -609,7 +575,6 @@
   .mailBox {
     display: flex;
     gap: 5px;
-    color: var(--darkGreen);
     align-items: center;
     margin: 0;
   }
@@ -622,21 +587,29 @@
     font-size: 14px;
   }
 
+  .bottomFoot {
+    text-align: center;
+  }
+
   .bottomFoot p {
     font-size: 8px;
     width: 80%;
     line-height: 11px;
   }
 
-  .bottomFoot {
-    text-align: center;
+  /* 📌 Footer Gradient Line */
+  .gradLine {
+    background: linear-gradient(90deg, var(--pinkD), var(--pinkL));
+    width: 80vw;
+    height: 2px;
+    margin-bottom: 10px;
   }
+}
 
-  .footer {
-    padding: 20px 40px 10px 40px;
-  }
-
-  .navbar {
-    padding: 2px 15px;
-  }
+/* 📌 General Mobile Container */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
 }

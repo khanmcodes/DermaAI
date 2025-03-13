@@ -8,7 +8,7 @@ import DiseasesWeDetect from "../components/DiseasesWeDetect/DiseasesWeDetect";
 
 export default function Home() {
   return (
-    <div>
+    <>
       <div className="hero-section">
         <div className="hero-content">
           <div className="heroR">
@@ -17,9 +17,6 @@ export default function Home() {
             </div>
           </div>
           <div className="heroL">
-            <div className="mobHeroImg">
-              <img src={heroImg} alt="" />
-            </div>
             <h1 className="heroH1">Revolutionizing Skin Health with AI</h1>
             <p className="heroP">
               Accurately detect and classify skin diseases in seconds with
@@ -49,8 +46,10 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="howitworks-section" id="How-It-Works-ID">
-        <h1 className="hiwH1">How To Diagnose</h1>
+      <div className="howitworks-section">
+        <h1 className="hiwH1" id="How-It-Works-ID">
+          How To Diagnose
+        </h1>
         <div className="hiw-stepper">
           <Stepper
             initialStep={1}
@@ -93,9 +92,9 @@ export default function Home() {
       </div>
 
       <div className="dwd-section">
-      <h1 className="dwdH1">Diseases We Detect</h1>
-        <DiseasesWeDetect/>
+        <h1 className="dwdH1">Diseases We Detect</h1>
+        <DiseasesWeDetect />
       </div>
-    </div>
+    </>
   );
 }

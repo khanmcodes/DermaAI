@@ -44,7 +44,7 @@ export default function Footer() {
           </p>
           <div className="mailBox">
             <MdOutlineEmail className="footerIcon" />
-            <p className="email">pnuescan@gmail.com</p>
+            <p className="email">darma.ai@gmail.com</p>
           </div>
         </div>
         <div className="rightFoot">
