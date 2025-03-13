@@ -9,6 +9,14 @@
   --gray: #FFF5E1;
   --red: #984b4b;
   --font-family: "Inter", sans-serif;
+  --logo-ff: 'Klemer', sans-serif;
+}
+
+@font-face {
+  font-family: 'Klemer';
+  src: url('/src/assets/fonts/kdd.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 
 * {

@@ -1,5 +1,4 @@
 import React from "react";
-import logo from "../assets/logo/logo.png";
 import { MdOutlineEmail } from "react-icons/md";
 import { NavLink, useNavigate, useLocation } from "react-router-dom";
 import { scroller } from "react-scroll";
@@ -32,29 +31,28 @@ export default function Footer() {
       <div className="topFoot">
         <div className="leftFoot">
           <div className="footLogo">
-            <div className="logoImg">
-              <img src={logo} alt="Pneuscan Logo" />
-            </div>
             <div className="logoTitle">
-              derma<span>ai</span>
+              S<span>A</span>F
             </div>
           </div>
-          <p className="subtitle">
-          Because Your Skin Deserves the Best.
-          </p>
+          <p className="subtitle">Because Your Skin Deserves the Best.</p>
           <div className="mailBox">
             <MdOutlineEmail className="footerIcon" />
-            <p className="email">darma.ai@gmail.com</p>
+            <p className="email">skinadvisefusion@gmail.com</p>
           </div>
         </div>
         <div className="rightFoot">
           <div className="links-container">
             <div>
-              <NavLink to="/" end>Home</NavLink>
+              <NavLink to="/" end>
+                Home
+              </NavLink>
               <NavLink to="/Diagnose">Diagnose</NavLink>
             </div>
             <div>
-              <p onClick={() => handleScroll("How-It-Works-ID")}>How It Works</p>
+              <p onClick={() => handleScroll("How-It-Works-ID")}>
+                How It Works
+              </p>
               <NavLink to="/About-us">About us</NavLink>
             </div>
           </div>
@@ -63,7 +61,10 @@ export default function Footer() {
 
       <div className="bottomFoot">
         <div className="gradLine"></div>
-        <p><span>Disclaimer: </span>This tool is for informational purposes only and not a substitute for professional medical advice.</p>
+        <p>
+          <span>Disclaimer: </span>This tool is for informational purposes only
+          and not a substitute for professional medical advice.
+        </p>
       </div>
     </div>
   );

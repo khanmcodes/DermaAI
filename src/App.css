@@ -6,12 +6,19 @@
   align-items: center;
 }
 
+.logoImg img {
+  border-radius: 50px;
+  mix-blend-mode: lighten;
+}
+
 .logoTitle {
   display: flex;
-  line-height: 30px;
+  line-height: normal;
   font-weight: 600;
-  font-size: 30px;
+  font-size: 3vw;
   align-items: flex-end;
+  font-family: var(--logo-ff);
+  padding-top: 10px;
 }
 
 .logoTitle span {
@@ -347,7 +354,7 @@
 .navbar-container {
   display: flex;
   justify-content: center;
-  padding: 20px 20px;
+  padding: 2px 20px;
   position: fixed;
   align-items: center;
   z-index: 99999;
@@ -604,12 +611,19 @@
     height: 2px;
     margin-bottom: 10px;
   }
-}
 
-/* 📌 General Mobile Container */
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 15px;
+  .logoTitle {
+    font-size: 10vw;
+  }
+
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+
+  .navbar-container {
+    top: 23px;
+  }
 }
