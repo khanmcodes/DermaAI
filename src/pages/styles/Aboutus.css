@@ -22,6 +22,11 @@
 .team-member p {
   text-align: center;
   font-size: 14px;
+  color: rgb(182, 180, 180);
+  
+}
+.team-member h3 {
+  margin-top: 10px;
 }
 
 .about-bg img {

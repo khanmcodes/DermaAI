@@ -1,12 +1,15 @@
 import React from "react";
 import "./styles/Aboutus.css";
 import aboutbg from "../assets/Images/aboutbg.jpg";
-import member4 from "../assets/Images/team-members/sasuee.jpg";
-import member5 from "../assets/Images/team-members/sarmad.jpg";
-import dummy from "../assets/Images/team-members/dummy.jpg";
+import member1 from "../assets/Images/team-members/filza.jpg";
+import member2 from "../assets/Images/team-members/noor.jpg";
+import member3 from "../assets/Images/team-members/saimoon.jpg";
+import member4 from "../assets/Images/team-members/natasha.jpg";
+// import member5 from "../assets/Images/team-members/sarmad.jpg";
 import { FaReact } from "react-icons/fa";
 import { TbBrandVite } from "react-icons/tb";
 import { SiFlask, SiFastapi } from "react-icons/si";
+import { MdOutlineEmail } from "react-icons/md";
 
 export default function Aboutus() {
   return (
@@ -62,36 +65,39 @@ export default function Aboutus() {
           <h2>Creators</h2>
           <div className="team-grid">
             <div className="team-member">
-              <img src={dummy} alt="Team Member 1" />
-              <p>Member Name 1</p>
+              <img src={member1} alt="Team Member 1" />
+              <h3>Filza Naveed Siddique</h3>
               <p>Biomedical Engineering Dep | LUMHS</p>
             </div>
             <div className="team-member">
-              <img src={dummy} alt="Team Member 2" />
-              <p>Member Name 2</p>
+              <img src={member2} alt="Team Member 2" />
+              <h3>Noor-Ul-Sehar</h3>
               <p>Biomedical Engineering Dep | LUMHS</p>
             </div>
             <div className="team-member">
-              <img src={dummy} alt="Team Member 3" />
-              <p>Member Name 3</p>
+              <img src={member3} alt="Team Member 3" />
+              <h3>Saimoon Hanif</h3>
               <p>Biomedical Engineering Dep | LUMHS</p>
             </div>
           </div>
         </div>
 
         <div className="team-section">
-          <h2>Supervisor & Co-Supervisor</h2>
+          <h2>Supervisor</h2>
           <div className="team-grid">
             <div className="team-member">
               <img src={member4} alt="Team Member 1" />
-              <p>Engr. Sasuee Khatoon</p>
+              <h3>Engr. Natasha</h3>
               <p>Lecturer | IBET LUMHS</p>
+              <a href="mailto:natasha.mukhtiar@lumhs.edu.pk">
+                <p style={{fontSize: '20px', color: 'var(--pinkL)'}}><MdOutlineEmail/></p>
+              </a>
             </div>
-            <div className="team-member">
+            {/* <div className="team-member">
               <img src={member5} alt="Team Member 2" />
               <p>Dr. Sarmad Shams</p>
               <p>Head of Director | IBET DEPARTMENT</p>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
