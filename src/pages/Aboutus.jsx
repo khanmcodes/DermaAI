@@ -1,9 +1,9 @@
 import React from "react";
 import "./styles/Aboutus.css";
 import aboutbg from "../assets/Images/aboutbg.jpg";
-import member1 from "../assets/Images/team-members/mariam.jpg";
-import member2 from "../assets/Images/team-members/rameesa.jpg";
-import member3 from "../assets/Images/team-members/ushna.jpg";
+import member4 from "../assets/Images/team-members/sasuee.jpg";
+import member5 from "../assets/Images/team-members/sarmad.jpg";
+import dummy from "../assets/Images/team-members/dummy.jpg";
 import { FaReact } from "react-icons/fa";
 import { TbBrandVite } from "react-icons/tb";
 import { SiFlask, SiFastapi } from "react-icons/si";
@@ -28,8 +28,8 @@ export default function Aboutus() {
         <div className="about-text">
           <h2>About</h2>
           <p>
-            <strong style={{ color: "var(--pinkL)" }}>SAF</strong> - Skin Advise Fusion is an
-            AI-powered tool designed to assist in{" "}
+            <strong style={{ color: "var(--pinkL)" }}>SAF</strong> - Skin Advise
+            Fusion is an AI-powered tool designed to assist in{" "}
             <strong>skin disease detection</strong>. Our platform leverages{" "}
             <strong>machine learning</strong> to provide fast, accessible, and{" "}
             <strong>highly accurate</strong> diagnoses of various skin
@@ -57,38 +57,40 @@ export default function Aboutus() {
 
         <div className="team-section">
           <h1 className="about-name" style={{ marginBottom: "30px" }}>
-          S<span>A</span>F
-          <span>Team</span>
+            S<span>A</span>F<span>Team</span>
           </h1>
           <h2>Creators</h2>
           <div className="team-grid">
             <div className="team-member">
-              <img src={member1} alt="Team Member 1" />
+              <img src={dummy} alt="Team Member 1" />
               <p>Member Name 1</p>
+              <p>Biomedical Engineering Dep | LUMHS</p>
             </div>
             <div className="team-member">
-              <img src={member2} alt="Team Member 2" />
+              <img src={dummy} alt="Team Member 2" />
               <p>Member Name 2</p>
+              <p>Biomedical Engineering Dep | LUMHS</p>
             </div>
             <div className="team-member">
-              <img src={member3} alt="Team Member 3" />
+              <img src={dummy} alt="Team Member 3" />
               <p>Member Name 3</p>
+              <p>Biomedical Engineering Dep | LUMHS</p>
             </div>
           </div>
         </div>
 
         <div className="team-section">
-          <h2>Supervisor</h2>
+          <h2>Supervisor & Co-Supervisor</h2>
           <div className="team-grid">
             <div className="team-member">
-              <img src={member1} alt="Team Member 1" />
-              <p>Member Name 1</p>
-              <p>Lecturer | IBET LUMHS </p>
+              <img src={member4} alt="Team Member 1" />
+              <p>Engr. Sasuee Khatoon</p>
+              <p>Lecturer | IBET LUMHS</p>
             </div>
             <div className="team-member">
-              <img src={member2} alt="Team Member 2" />
-              <p>Member Name 2</p>
-              <p>Lecturer | IBET LUMHS </p>
+              <img src={member5} alt="Team Member 2" />
+              <p>Dr. Sarmad Shams</p>
+              <p>Head of Director | IBET DEPARTMENT</p>
             </div>
           </div>
         </div>

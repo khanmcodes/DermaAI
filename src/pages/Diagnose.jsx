@@ -152,7 +152,6 @@ export default function Diagnose() {
     }
   };
 
-  // Adding event listener to detect paste
   React.useEffect(() => {
     document.addEventListener("paste", handlePasteClick);
     return () => document.removeEventListener("paste", handlePasteClick);
