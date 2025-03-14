@@ -4,7 +4,7 @@ import eczema from "./Diseases/eczema.png";
 import seborrheicKeratosis from "./Diseases/seborrheic_keratosis.png";
 import psoriasis from "./Diseases/psoriasis.png";
 import lichenPlanus from "./Diseases/lichen_planus.png";
-import ringworm from "./Diseases/ringworm.png";
+import fungalDiseases from "./Diseases/fungal_diseases.jpg";
 
 const diseases = [
   {
@@ -38,10 +38,10 @@ const diseases = [
     image: lichenPlanus,
   },
   {
-    name: "Tinea (Ringworm)",
+    name: "Fungal Diseases",
     description:
-      "A highly contagious fungal infection that forms red, circular, itchy rashes.",
-    image: ringworm,
+      "Fungal infection, also known as mycosis, is a disease caused by fungi.",
+    image: fungalDiseases,
   },
 ];
 

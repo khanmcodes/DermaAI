@@ -3,7 +3,6 @@ import "./styles/Diagnose.css";
 import { FiUpload } from "react-icons/fi";
 import { FaDeleteLeft } from "react-icons/fa6";
 import { RiBodyScanLine } from "react-icons/ri";
-import loadingImg from "../assets/Images/waiting.png";
 import { FaPrint } from "react-icons/fa6";
 import { MdContentPaste } from "react-icons/md";
 
@@ -290,7 +289,6 @@ export default function Diagnose() {
       </div>
 
       <div className="loadingAnim" style={{ display: waitingImgDisplay }}>
-        <img src={loadingImg} alt="" />
         <p className="waitingLabel">Scanning, Just a moment..</p>
       </div>
 
