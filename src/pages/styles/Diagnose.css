@@ -62,7 +62,9 @@
 }
 
 .clearBtn,
-.uploadBtn, .printBtn, .pasteBtn {
+.uploadBtn,
+.printBtn,
+.pasteBtn {
   color: var(--pinkL);
   background-color: var(--bg-color);
   border-radius: 50px;
@@ -74,13 +76,19 @@
   transition: color 0.3s ease;
 }
 
-.printBtn, .pasteBtn, .clearBtn, .uploadBtn {
+.printBtn,
+.pasteBtn,
+.clearBtn,
+.uploadBtn {
   border-radius: 50%;
   border: none;
   padding: 5px;
 }
 
-.uploadBtn:hover, .clearBtn:hover, .printBtn:hover, .pasteBtn:hover {
+.uploadBtn:hover,
+.clearBtn:hover,
+.printBtn:hover,
+.pasteBtn:hover {
   color: var(--green);
 }
 
@@ -102,16 +110,6 @@
   margin: 10px 0 10px 0;
 }
 
-.result.pneumonia {
-  color: #d9534f;
-  font-size: 25px;
-}
-
-.result.normal {
-  color: #5cb85c;
-  font-size: 25px;
-}
-
 .detailed-result {
   margin-top: 15px;
   padding-top: 15px;
@@ -125,18 +123,20 @@
   font-size: 18px;
 }
 
-.detailed-result p{
+.detailed-result p {
   font-weight: 600;
   font-size: 16px;
+  color: #333;
 }
 
-.detailed-result p strong{
+.detailed-result p strong {
   font-weight: 400;
+  color: #333;
 }
 
 .error-container {
   margin-top: 20px;
-  color: #d9534f;
+  color: #d05c58;
 }
 
 .loadingAnim {
@@ -146,6 +146,14 @@
 
 .loadingAnim p {
   font-weight: 500;
+}
+
+.diagnosis {
+  font-size: 1.5rem;
+  margin-top: 3px;
+  margin-bottom: 3px;
+  font-weight: 600;
+  color: #cf7370;
 }
 
 @media (max-width: 768px) {
@@ -171,14 +179,14 @@
     width: 75vw;
   }
 
-  .result.normal, .result.pneumonia {
+  .result.diagnose,
+  .result {
     font-size: 5vw;
-}
+  }
 
-.result-container h3, .detailed-result h4 {
-  font-weight: 600;
-  font-size: 4vw;
-}
-
-
+  .result-container h3,
+  .detailed-result h4 {
+    font-weight: 600;
+    font-size: 4vw;
+  }
 }
