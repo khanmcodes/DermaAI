@@ -6,8 +6,8 @@ import "./Stepper.css";
 export default function Stepper({
   children,
   initialStep = 1,
-  onStepChange = () => { },
-  onFinalStepCompleted = () => { },
+  onStepChange = () => {},
+  onFinalStepCompleted = () => {},
   stepCircleContainerClassName = "",
   stepContainerClassName = "",
   contentClassName = "",
@@ -32,7 +32,7 @@ export default function Stepper({
     if (newStep > totalSteps) {
       onFinalStepCompleted();
     } else {
-      onStepChange(newStep);
+      onStepChange(newStep); 
     }
   };
 
@@ -57,7 +57,10 @@ export default function Stepper({
 
   return (
     <div className="outer-container" {...rest}>
-      <div className={`step-circle-container ${stepCircleContainerClassName}`} style={{ border: "1px solid #222" }}>
+      <div
+        className={`step-circle-container ${stepCircleContainerClassName}`}
+        style={{ border: "1px solid #222" }}
+      >
         <div className={`step-indicator-row ${stepContainerClassName}`}>
           {stepsArray.map((_, index) => {
             const stepNumber = index + 1;
@@ -103,11 +106,15 @@ export default function Stepper({
 
         {!isCompleted && (
           <div className={`footer-container ${footerClassName}`}>
-            <div className={`footer-nav ${currentStep !== 1 ? "spread" : "end"}`}>
+            <div
+              className={`footer-nav ${currentStep !== 1 ? "spread" : "end"}`}
+            >
               {currentStep !== 1 && (
                 <button
                   onClick={handleBack}
-                  className={`back-button ${currentStep === 1 ? "inactive" : ""}`}
+                  className={`back-button ${
+                    currentStep === 1 ? "inactive" : ""
+                  }`}
                   {...backButtonProps}
                 >
                   {backButtonText}
@@ -128,7 +135,13 @@ export default function Stepper({
   );
 }
 
-function StepContentWrapper({ isCompleted, currentStep, direction, children, className }) {
+function StepContentWrapper({
+  isCompleted,
+  currentStep,
+  direction,
+  children,
+  className,
+}) {
   const [parentHeight, setParentHeight] = useState(0);
 
   return (
@@ -140,7 +153,11 @@ function StepContentWrapper({ isCompleted, currentStep, direction, children, cla
     >
       <AnimatePresence initial={false} mode="sync" custom={direction}>
         {!isCompleted && (
-          <SlideTransition key={currentStep} direction={direction} onHeightReady={(h) => setParentHeight(h)}>
+          <SlideTransition
+            key={currentStep}
+            direction={direction}
+            onHeightReady={(h) => setParentHeight(h)}
+          >
             {children}
           </SlideTransition>
         )}
@@ -191,20 +208,43 @@ export function Step({ children }) {
   return <div className="step-default">{children}</div>;
 }
 
-function StepIndicator({ step, currentStep, onClickStep, disableStepIndicators }) {
-  const status = currentStep === step ? "active" : currentStep < step ? "inactive" : "complete";
+function StepIndicator({
+  step,
+  currentStep,
+  onClickStep,
+  disableStepIndicators,
+}) {
+  const status =
+    currentStep === step
+      ? "active"
+      : currentStep < step
+      ? "inactive"
+      : "complete";
 
   const handleClick = () => {
     if (step !== currentStep && !disableStepIndicators) onClickStep(step);
   };
 
   return (
-    <motion.div onClick={handleClick} className="step-indicator" animate={status} initial={false}>
+    <motion.div
+      onClick={handleClick}
+      className="step-indicator"
+      animate={status}
+      initial={false}
+    >
       <motion.div
         variants={{
           inactive: { scale: 1, backgroundColor: "#222", color: "#a3a3a3" },
-          active: { scale: 1, backgroundColor: "var(--pinkL)", color: "var(--pinkL)" },
-          complete: { scale: 1, backgroundColor: "var(--pinkL)", color: "var(--pinkD)" },
+          active: {
+            scale: 1,
+            backgroundColor: "var(--pinkL)",
+            color: "var(--pinkL)",
+          },
+          complete: {
+            scale: 1,
+            backgroundColor: "var(--pinkL)",
+            color: "var(--pinkD)",
+          },
         }}
         transition={{ duration: 0.3 }}
         className="step-indicator-inner"
@@ -242,11 +282,22 @@ function StepConnector({ isComplete }) {
 
 function CheckIcon(props) {
   return (
-    <svg {...props} fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+    <svg
+      {...props}
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={2}
+      viewBox="0 0 24 24"
+    >
       <motion.path
         initial={{ pathLength: 0 }}
         animate={{ pathLength: 1 }}
-        transition={{ delay: 0.1, type: "tween", ease: "easeOut", duration: 0.3 }}
+        transition={{
+          delay: 0.1,
+          type: "tween",
+          ease: "easeOut",
+          duration: 0.3,
+        }}
         strokeLinecap="round"
         strokeLinejoin="round"
         d="M5 13l4 4L19 7"

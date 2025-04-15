@@ -58,7 +58,7 @@ export default function Diagnose() {
       printWindow.document.write(`
         <html>
           <head>
-            <title>Print X-ray Scan</title>
+            <title>Print Skin Diagnose</title>
             <style>
               body {
                 font-family: Arial, sans-serif;
@@ -95,7 +95,7 @@ export default function Diagnose() {
           </head>
           <body>
             <div class="print-container">
-              <div class="logo">Pneu Scan</div>
+              <div class="logo">Skin Advice Fusion</div>
               <img src="${preview}" class="xray-image" alt="X-ray Scan" />
               <div class="result">
                 <p><strong>Diagnosis:</strong> ${result.prediction}</p>
@@ -104,7 +104,7 @@ export default function Diagnose() {
                 )}%</p>
               </div>
               ${
-                detailedResult && result.prediction === "Pneumonia"
+                detailedResult && result.prediction === "Skin Advice Fusion"
                   ? `<div class="detailed-result">
                       <p><strong>Type:</strong> ${
                         detailedResult.detailed_prediction
@@ -212,7 +212,7 @@ export default function Diagnose() {
           const data = await response.json();
           setResult(data);
 
-          if (data.prediction === "Pneumonia") {
+          if (data.prediction === "Skin Advice Fusion") {
             setWaitingImgDisplay("none");
 
             try {
@@ -295,32 +295,12 @@ export default function Diagnose() {
       {result && (
         <div className="result-container">
           <h3>Scan Results:</h3>
-          <p
-            className={`result ${
-              result.prediction === "Pneumonia" ? "pneumonia" : "normal"
-            }`}
-          >
+          <p className="diagnosis">
             <strong>Diagnosis:</strong> {result.prediction}
           </p>
           <p>
             <strong>Confidence:</strong> {result.confidence.toFixed(2)}%
           </p>
-
-          {detailedResult && result.prediction === "Pneumonia" && (
-            <div className="detailed-result">
-              <h4>Detailed Analysis:</h4>
-              <p>
-                <strong>Type:</strong> {detailedResult.detailed_prediction}
-              </p>
-              <p>
-                <strong>Severity:</strong> {detailedResult.severity}
-              </p>
-              <p>
-                <strong>Confidence:</strong>{" "}
-                {detailedResult.confidence.toFixed(2)}%
-              </p>
-            </div>
-          )}
         </div>
       )}
 
