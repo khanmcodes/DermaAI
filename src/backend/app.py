@@ -75,10 +75,6 @@ def predict():
             else:
                 recommendation = "This is a high confidence prediction, but always consult with a healthcare professional for confirmation."
 
-            if confidence >=100:
-                confidence = 95
-
-
             return jsonify({
                 'prediction': predicted_class,
                 'confidence': round(confidence, 2),
