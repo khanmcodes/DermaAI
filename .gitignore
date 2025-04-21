@@ -15,7 +15,6 @@ dist-ssr
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
-src/backend/models/final_model.keras
 .idea
 .DS_Store
 *.suo
