@@ -51,12 +51,12 @@
 
 .about-name {
   display: flex;
-  font-weight: 600;
+  font-weight: 700;
   line-height: normal;
-  font-size: 5rem;
+  font-size: 3rem;
   align-items: flex-end;
   margin-bottom: 0px;
-  font-family: var(--logo-ff)
+  font-family: var(--font-family);
 }
 
 .about-name span {

@@ -32,13 +32,13 @@ export default function Footer() {
         <div className="leftFoot">
           <div className="footLogo">
             <div className="logoTitle">
-              S<span>A</span>F
+              derma<span>ai</span>
             </div>
           </div>
           <p className="subtitle">Because Your Skin Deserves the Best.</p>
           <div className="mailBox">
             <MdOutlineEmail className="footerIcon" />
-            <p className="email">skinadvisefusion@gmail.com</p>
+            <p className="email">dermaai@gmail.com</p>
           </div>
         </div>
         <div className="rightFoot">
@@ -61,10 +61,23 @@ export default function Footer() {
 
       <div className="bottomFoot">
         <div className="gradLine"></div>
-        <p>
-          <span>Disclaimer: </span>This tool is for informational purposes only
-          and not a substitute for professional medical advice.
-        </p>
+        <div className="foot-content" style={{ display: "flex", justifyContent: "space-between", width: "100%" }}>
+          <p className="foot-content-left">
+            <span>Disclaimer: </span>This tool is for informational purposes only
+            and not a substitute for professional medical advice.
+          </p>
+          <p>
+            Produced by{" "}
+            <a
+              href="https://www.hyperlogic.studio"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ color: "var(--pinkL)" }}
+            >
+              Hyperlogic
+            </a>
+          </p>
+        </div>
       </div>
     </div>
   );

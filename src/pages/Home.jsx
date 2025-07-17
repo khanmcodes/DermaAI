@@ -1,8 +1,11 @@
 import React from "react";
 import heroImg from "../assets/Images/heroImg.png";
 import heroImg2 from "../assets/Images/heroimg2.png";
+import skinDermatologyBg from "../assets/Images/skin-dermatology-bg.jpg";
 import { NavLink } from "react-router-dom";
-import { FiUpload } from "react-icons/fi";
+import { FiUpload, FiArrowRight, FiCheckCircle } from "react-icons/fi";
+import { RiAiGenerate } from "react-icons/ri";
+import { MdOutlineSpeed, MdOutlineVerified } from "react-icons/md";
 import Stepper, { Step } from "../components/Stepper/Stepper";
 import DiseasesWeDetect from "../components/DiseasesWeDetect/DiseasesWeDetect";
 
@@ -10,39 +13,98 @@ export default function Home() {
   return (
     <>
       <div className="hero-section">
+        <div className="hero-background">
+          <img src={skinDermatologyBg} alt="Dermatology and Skin Health" className="hero-bg-image" />
+          <div className="hero-overlay"></div>
+        </div>
+        
         <div className="hero-content">
-          <div className="heroR">
-            <div className="heroImg">
-              <img className="img2" src={heroImg} alt="" />
+          <div className="hero-container">
+            <div className="hero-text-content">
+              <div className="hero-badge">
+                <RiAiGenerate className="badge-icon" />
+                <span>AI-Powered Dermatology</span>
+              </div>
+              
+              <h1 className="hero-title">
+                Revolutionizing <span className="gradient-text">Skin Health</span> with Advanced AI
+              </h1>
+              
+              <p className="hero-description">
+                Get instant, accurate skin disease detection powered by cutting-edge artificial intelligence. 
+                Our advanced system analyzes your skin images with medical-grade precision, delivering 
+                <span className="highlight"> faster</span>, <span className="highlight">smarter</span>, and 
+                <span className="highlight"> more reliable</span> diagnostics—anytime, anywhere.
+              </p>
+
+              <div className="hero-features">
+                <div className="feature-item">
+                  <MdOutlineSpeed className="feature-icon" />
+                  <span>Instant Results</span>
+                </div>
+                <div className="feature-item">
+                  <MdOutlineVerified className="feature-icon" />
+                  <span>Medical Grade AI</span>
+                </div>
+                <div className="feature-item">
+                  <FiCheckCircle className="feature-icon" />
+                  <span>95% Accuracy</span>
+                </div>
+              </div>
+
+              <div className="hero-cta">
+                <NavLink to="/Diagnose" className="cta-primary">
+                  <button className="btn-hero-primary">
+                    <FiUpload className="btn-icon" />
+                    Start Diagnosis
+                    <FiArrowRight className="btn-arrow" />
+                  </button>
+                </NavLink>
+                <button className="btn-hero-secondary">
+                  <span>Learn More</span>
+                </button>
+              </div>
+            </div>
+
+            <div className="hero-image-content">
+              <div className="hero-image-container">
+                <div className="floating-card card-1">
+                  <div className="card-content">
+                    <div className="card-icon">🔬</div>
+                    <div className="card-text">
+                      <h4>AI Analysis</h4>
+                      <p>Advanced detection</p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="floating-card card-2">
+                  <div className="card-content">
+                    <div className="card-icon">⚡</div>
+                    <div className="card-text">
+                      <h4>Instant Results</h4>
+                      <p>Get diagnosis in seconds</p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="floating-card card-3">
+                  <div className="card-content">
+                    <div className="card-icon">🎯</div>
+                    <div className="card-text">
+                      <h4>95% Accuracy</h4>
+                      <p>Medical-grade precision</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="main-hero-image">
+                  <img src={heroImg} alt="Skin Analysis" className="hero-main-img" />
+                  <div className="image-glow"></div>
+                </div>
+              </div>
             </div>
           </div>
-          <div className="heroL">
-            <h1 className="heroH1">Revolutionizing Skin Health with AI</h1>
-            <p className="heroP">
-              Accurately detect and classify skin diseases in seconds with
-              AI-powered analysis. Get{" "}
-              <span style={{ color: "var(--pinkD)", fontWeight: "600" }}>
-                faster
-              </span>
-              ,{" "}
-              <span style={{ color: "var(--pinkD)", fontWeight: "600" }}>
-                smarter
-              </span>
-              , and more{" "}
-              <span style={{ color: "var(--pinkD)", fontWeight: "600" }}>
-                reliable
-              </span>{" "}
-              skin diagnostics—anytime, anywhere.
-            </p>
-            <NavLink to="/Diagnose">
-              <button className="btn-gradient">
-                <FiUpload /> Upload Now
-              </button>
-            </NavLink>
-          </div>
-        </div>
-        <div className="hero-transImg">
-          <img src={heroImg2} alt="" />
         </div>
       </div>
 
